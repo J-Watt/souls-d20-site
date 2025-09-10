@@ -1,0 +1,312 @@
+"use client";
+
+import Image from "next/image";
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
+import InfoCarousel from "@/components/InfoCarousel";
+
+
+// Carousel data for Creative Builds section
+const buildsSlides = [
+  {
+    text: `<h3 class="text-[color:var(--gold)] text-xl mb-4">Scholar of All Magic</h3>
+           <p>Master the art of sound and song to weave the essence of every magical school, Pyromancy, Miracles, Sorcery, Hexes, into a symphony of power. With the right instrument in hand, the world bends to your melody, conjuring firestorms, healing light, destructive spells, and curses all at once.</p>`,
+    image: "/images/info/image5.jpg",
+    alt: "Scholar of All Magic build"
+  },
+  {
+    text: `<h3 class="text-[color:var(--gold)] text-xl mb-4">Blood Monk</h3>
+           <p>Go down the <em>Fist</em> and <em>Reaper</em> trees to create a monk-like character who deals extra bleed build-up at the cost of their own blood or a martial artist who protects their allies while draining enemies.</p>`,
+    image: "/images/info/image6.jpg",
+    alt: "Blood monk build"
+  },
+  {
+    text: `<h3 class="text-[color:var(--gold)] text-xl mb-4">Tanky Gunslinger</h3>
+           <p>Try out a <em>tanky gunslinger</em> who defends with a shield while taking precise shots with a firearm, combining defense and ranged mastery.</p>`,
+    image: "/images/info/image7.jpg",
+    alt: "Tanky gunslinger build"
+  }
+];
+
+export default function InfoPage() {
+  return (
+    <div className="mx-auto max-w-6xl px-4 py-12 space-y-16">
+      
+      {/* Hero intro */}
+      <Reveal>
+        <section className="panel relative overflow-hidden">
+          {/* Watermark logo */}
+          <div className="absolute inset-0 opacity-5 flex items-center justify-center">
+            <Image
+              src="/images/logos/SoulsD20 LOGO Color.png"
+              alt=""
+              width={400}
+              height={400}
+              className="object-contain"
+            />
+          </div>
+          <div className="relative z-10 text-center max-w-4xl mx-auto">
+            <h1 className="text-[color:var(--gold)] font-['Mantinia'] text-4xl md:text-5xl mb-6">
+              A Complete System
+            </h1>
+            <p className="text-lg md:text-xl leading-relaxed">
+              Souls D20 is a full-system tabletop roleplaying experience inspired by the Elden Ring 
+              and Soulsborne games. With strategic combat and highly customizable character builds, 
+              Souls D20 can be played in person or online using the Handbook for a complete ruleset 
+              as well as resources.
+            </p>
+          </div>
+        </section>
+      </Reveal>
+
+      {/* System preview section */}
+      <Reveal>
+        <section className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+          <div className="panel">
+            <h2 className="text-[color:var(--gold)] text-2xl md:text-3xl font-semibold mb-4">
+              Check Out the System Preview!
+            </h2>
+            <p className="mb-4">
+              Take a peek inside the system with the available preview. Souls D20 is regularly updated 
+              and playtested. To get the latest full version, please check out our Discord and get in contact.
+            </p>
+            <h3 className="text-[color:var(--gold)] text-xl font-semibold mb-3">
+              320+ Pages of Content
+            </h3>
+            <p className="mb-4">
+              The complete Souls D20 book includes over 320 pages of resources, such as spell lists, 
+              equipment and weapons lists, skill and ability trees, and quick guides for leveling and 
+              building a character.
+            </p>
+            <p className="mb-6">
+              Everything you need to run engaging campaigns with detailed equipment, comprehensive 
+              spell systems, and balanced encounter guidelines. Souls D20 is regularly updated 
+              and playtested. Get the latest full version through our Discord community.
+            </p>
+            <a
+              href="https://discord.gg/UnEKqTx"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center rounded-md px-6 py-3
+                         font-semibold uppercase tracking-wide text-black
+                         bg-[color:var(--gold)] hover:brightness-110 active:translate-y-[1px]
+                         transition"
+            >
+              Join Discord
+            </a>
+          </div>
+          <div className="relative aspect-[3/4] rounded-lg overflow-hidden">
+            <Image
+              src="/images/info/image1.jpg"
+              alt="System preview and book content"
+              fill
+              sizes="(min-width: 768px) 50vw, 100vw"
+              className="object-contain"
+            />
+          </div>
+        </section>
+      </Reveal>
+
+      {/* Character builds section */}
+      <Reveal>
+        <section className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+          <div className="relative aspect-[3/4] rounded-lg overflow-hidden">
+            <Image
+              src="/images/info/image2.jpg"
+              alt="Character build trees"
+              fill
+              sizes="(min-width: 768px) 50vw, 100vw"
+              className="object-contain"
+            />
+          </div>
+          <div className="panel">
+            <h2 className="text-[color:var(--gold)] text-2xl md:text-3xl font-semibold mb-4">
+              Customized Builds
+            </h2>
+            <p className="mb-4">
+              23 unique ability trees allow you to mix and match abilities and synergies to create 
+              endless possibilities for your character builds.
+            </p>
+            <p className="mb-4">
+              As you gain experience through adventuring, your character will earn points to invest into 
+              multiple ability trees at once. Mix and match abilities from different trees to create a 
+              unique character. Most abilities can be combined with most weapon types!
+            </p>
+            <p className="mb-4">
+              For example, a character who has invested into the <strong>Daggers tree</strong> to deal 
+              more damage from behind can still take advantage of that ability even while wielding 
+              a non-dagger weapon.
+            </p>
+            <p>
+              Choose from dozens of <strong>Feats of Destiny</strong>, which can be taken at any level 
+              by any character. These include becoming truly undead and taking permanent injuries instead 
+              of dying, learning new languages to communicate with monsters, or binding a magical familiar 
+              under your control.
+            </p>
+          </div>
+        </section>
+      </Reveal>
+
+      {/* Spells section */}
+      <Reveal>
+        <section className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+          <div className="panel">
+            <h2 className="text-[color:var(--gold)] text-2xl md:text-3xl font-semibold mb-4">
+              Wide Range Of Spells
+            </h2>
+            <p className="mb-4">
+              Explore multiple categories of magic and spellcasting to build a caster or spellblade 
+              of your own! Choose from <strong>Sorceries</strong>, <strong>Miracles</strong>, 
+              <strong>Pyromancy</strong>, <strong>Hexes</strong>, and even 
+              <strong>Spirit Summoning</strong>, each with subcategories and ability trees to progress down.
+            </p>
+            <ul className="space-y-2">
+              <li className="flex items-start">
+                <span className="w-2 h-2 rounded-full bg-[color:var(--gold)] mt-2 mr-3 flex-shrink-0"></span>
+                <span><em>Hexes of death</em> - explode corpses or create toxic fogs across the battlefield.</span>
+              </li>
+              <li className="flex items-start">
+                <span className="w-2 h-2 rounded-full bg-[color:var(--gold)] mt-2 mr-3 flex-shrink-0"></span>
+                <span><em>Force miracles</em> - push enemies and allies into advantageous positions.</span>
+              </li>
+              <li className="flex items-start">
+                <span className="w-2 h-2 rounded-full bg-[color:var(--gold)] mt-2 mr-3 flex-shrink-0"></span>
+                <span><em>Assassin sorceries</em> - cloak yourself in transparency and summon daggers to strike from behind.</span>
+              </li>
+              <li className="flex items-start">
+                <span className="w-2 h-2 rounded-full bg-[color:var(--gold)] mt-2 mr-3 flex-shrink-0"></span>
+                <span><em>Spirit summoning</em> - capture defeated monsters and call them back to fight at your side.</span>
+              </li>
+            </ul>
+          </div>
+          <div className="relative aspect-[3/4] rounded-lg overflow-hidden">
+            <Image
+              src="/images/info/image3.jpg"
+              alt="Magic spells showcase"
+              fill
+              sizes="(min-width: 768px) 50vw, 100vw"
+              className="object-contain"
+            />
+          </div>
+        </section>
+      </Reveal>
+
+      {/* Weapon skills section */}
+      <Reveal>
+        <section className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+          <div className="relative aspect-[3/4] rounded-lg overflow-hidden">
+            <Image
+              src="/images/info/image4.jpg"
+              alt="Weapon skills demonstration"
+              fill
+              sizes="(min-width: 768px) 50vw, 100vw"
+              className="object-contain"
+            />
+          </div>
+          <div className="panel">
+            <h2 className="text-[color:var(--gold)] text-2xl md:text-3xl font-semibold mb-4">
+              Master Weapon Skills
+            </h2>
+            <p className="mb-4">
+              Don't let spellcasters have all the fun! Learn and master an array of weapon skills that 
+              can be mixed and matched across a wide variety of weapons.
+            </p>
+            <ul className="space-y-3">
+              <li className="flex items-start">
+                <span className="w-2 h-2 rounded-full bg-[color:var(--gold)] mt-2 mr-3 flex-shrink-0"></span>
+                <span>Augment your attacks with area effects to strike multiple targets at once.</span>
+              </li>
+              <li className="flex items-start">
+                <span className="w-2 h-2 rounded-full bg-[color:var(--gold)] mt-2 mr-3 flex-shrink-0"></span>
+                <span>Inspire and buff your allies with weapon-based support skills.</span>
+              </li>
+              <li className="flex items-start">
+                <span className="w-2 h-2 rounded-full bg-[color:var(--gold)] mt-2 mr-3 flex-shrink-0"></span>
+                <span>Create blades of air with your strikes, pull in enemies with gravity, or vault across the battlefield.</span>
+              </li>
+              <li className="flex items-start">
+                <span className="w-2 h-2 rounded-full bg-[color:var(--gold)] mt-2 mr-3 flex-shrink-0"></span>
+                <span>Summon a phantom copy of yourself to strike unreachable foes.</span>
+              </li>
+            </ul>
+          </div>
+        </section>
+      </Reveal>
+      
+      {/* Creative builds carousel */}
+      <Reveal>
+        <section>
+          <h2 className="text-[color:var(--gold)] text-2xl md:text-3xl font-semibold text-center mb-8">
+            Creative Builds in Action
+          </h2>
+          <InfoCarousel slides={buildsSlides} />
+        </section>
+      </Reveal>
+
+      {/* Final CTA */}
+      <Reveal>
+        <section className="panel relative overflow-hidden text-center">
+          {/* Logo watermark */}
+          <div className="absolute inset-0 opacity-10 flex items-center justify-center">
+            <Image
+              src="/images/logos/SoulsD20 Title Color.png"
+              alt=""
+              width={600}
+              height={200}
+              className="object-contain"
+            />
+          </div>
+          <div className="relative z-10 max-w-2xl mx-auto">
+            <h2 className="text-[color:var(--gold)] text-3xl md:text-4xl font-semibold mb-6">
+              Explore the Full Souls D20 System
+            </h2>
+            <p className="text-lg mb-8">
+              Souls D20 is a living, evolving system designed for deep roleplay and challenging combat. 
+              Join the community, build your character, and test your skills against the world.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href="/play"
+                className="inline-flex items-center justify-center rounded-md px-8 py-4
+                           font-semibold uppercase tracking-wide text-black
+                           bg-[color:var(--gold)] hover:brightness-110 active:translate-y-[1px]
+                           transition"
+              >
+                Play Now
+              </a>
+              <a
+                href="https://discord.gg/UnEKqTx"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center rounded-md px-8 py-4
+                           font-semibold uppercase tracking-wide border-2 border-[color:var(--gold)]
+                           text-[color:var(--gold)] hover:bg-[color:var(--gold)] hover:text-black
+                           active:translate-y-[1px] transition"
+              >
+                Join Discord
+              </a>
+            </div>
+          </div>
+        </section>
+      </Reveal>
+
+    </div>
+  );
+}
+
+// Animation component with fade-in on scroll
+function Reveal({ children }: { children: React.ReactNode }) {
+  const ref = useRef<HTMLDivElement>(null);
+  const inView = useInView(ref, { once: true, margin: "0px 0px -100px 0px" });
+  
+  return (
+    <motion.div 
+      ref={ref} 
+      initial={{ opacity: 0, y: 30 }} 
+      animate={inView ? { opacity: 1, y: 0 } : {}} 
+      transition={{ duration: 0.8, ease: "easeOut" }}
+    >
+      {children}
+    </motion.div>
+  );
+}
