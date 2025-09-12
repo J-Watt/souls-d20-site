@@ -2,6 +2,15 @@
 const nextConfig = {
   reactStrictMode: true,
   typedRoutes: true,
+
+  // For GitHub Pages
+  output: 'export',
+  images: {
+    unoptimized: true,
+  },
+  basePath: '/souls-d20-site',
+  assetPrefix: '/souls-d20-site/',
+
   async headers() {
     return [
       {
@@ -25,11 +34,13 @@ const nextConfig = {
           },
           {
             key: 'Permissions-Policy',
-            value: 'camera=(), microphone=(), geolocation=(), browsing-topics=()',
+            value:
+              'camera=(), microphone=(), geolocation=(), browsing-topics=()',
           },
         ],
       },
     ];
   },
 };
+
 export default nextConfig;
