@@ -24,10 +24,10 @@ export default function MapPopover({ x, y, title, body, imgSrc, onClose }: Props
         transform: "translate(-50%, -110%)",
       }}
     >
-      {/* Fixed-size card so the image can be a stable 40% of the height */}
-      <div className="bg-theme-surface/95 border border-white/10 rounded-2xl shadow-soft w-72 sm:w-80 h-64 overflow-hidden">
-        {/* Image: fixed to ~40% of the popover height */}
-        <div className="h-[40%] w-full bg-black/30">
+      {/* Compact popover with reasonable sizing */}
+      <div className="bg-theme-surface/95 border border-white/10 rounded-2xl shadow-soft overflow-hidden flex w-[30rem] h-[12.5rem]">
+        {/* Image: left side, scaled down from 1024x1024 */}
+        <div className="w-[12.5rem] h-[12.5rem] flex-shrink-0 bg-black/30">
           {imgSrc ? (
             <img
               src={imgSrc}
@@ -42,21 +42,23 @@ export default function MapPopover({ x, y, title, body, imgSrc, onClose }: Props
           )}
         </div>
 
-        {/* Content */}
-        <div className="h-[60%] px-3 sm:px-4 py-2 sm:py-3 flex flex-col gap-1">
-          <div className="flex items-start justify-between gap-2">
-            <h3 className="text-sm sm:text-base font-semibold leading-tight">{title}</h3>
+        {/* Content: right side, same height as image */}
+        <div className="flex-1 flex flex-col h-full">
+          <div className="flex items-start justify-between gap-2 p-3 flex-shrink-0">
+            <h3 className="text-lg font-semibold leading-tight">{title}</h3>
             <button
               onClick={onClose}
-              className="rounded-md px-2 py-1 text-[11px] bg-white/10 hover:bg-white/20"
+              className="rounded-md px-2 py-1 text-xs bg-white/10 hover:bg-white/20 flex-shrink-0"
               aria-label="Close"
             >
-              Close
+              ×
             </button>
           </div>
-          <p className="text-xs sm:text-sm opacity-80 leading-relaxed line-clamp-[8]">
-            {body}
-          </p>
+          <div className="flex-1 overflow-y-auto px-3 pb-3">
+            <p className="text-sm opacity-80 leading-relaxed">
+              {body}
+            </p>
+          </div>
         </div>
       </div>
 
