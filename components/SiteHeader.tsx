@@ -40,7 +40,7 @@ export default function SiteHeader() {
         <ul className="flex items-center gap-4 sm:gap-5 md:gap-6 text-base md:text-lg">
           {leftLinks.map((l) => (
             <li key={l.href}>
-              <Link className="rounded px-2 py-1 hover:bg-white/10" href={l.href}>
+              <Link className="rounded px-2 py-1 hover:bg-white/10" href={l.href as any}>
                 {l.label}
               </Link>
             </li>
@@ -62,7 +62,7 @@ export default function SiteHeader() {
 
           {rightLinks.map((l) => (
             <li key={l.href}>
-              <Link className="rounded px-2 py-1 hover:bg-white/10" href={l.href}>
+              <Link className="rounded px-2 py-1 hover:bg-white/10" href={l.href as any}>
                 {l.label}
               </Link>
             </li>
