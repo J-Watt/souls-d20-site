@@ -32,28 +32,28 @@ const landmarks = [
     name: "Gil Othrond",
     pos: [IMAGE_HEIGHT-3339, 3193] as [number, number],
     img: "/images/landmarks/Gil Othrond.jpg",
-    text: "The Capital of the Empire, the seat of power and commerce. Golden and everyone gazing at the Erd Tree"
+    text: "The golden capital city of the empire. Seat of power for the god king Ilveren. The city sprawls underneath the glow of the world tree which extends up the cliffsides of the Gilded Plateau, over the Sea of Gilded Roots and above the golden and white domes of the cities buildings. Gil Othrond uses multiple world tree seedlings planted in gathering squares throughout the city as magical resting places. Most of the continent of Idorim uses the Pressed Gold of Gil Othrond as an accepted currency due to their immense riches and exerted power."
   },
   {
     id: "mirro",
     name: "Mirro",
     pos: [IMAGE_HEIGHT-2138, 2585] as [number, number],
     img: "/images/landmarks/Mirro.jpg",
-    text: "Lake city of the Sunless Isle"
+    text: "The pale blue city under the watching gaze of the giant volcanic mountain of Gargos. Mirro winds and twists across small islands overtop of the vivid and pale blue waters of the lake of its same name. Each island connected via bridges and low walkways over the water where gravity seems to lessen. Mirro was the first city in the Sunless Isle to discover the powerful floating substance of wetfire, and bring about a technological revolution which resulted in civil war. The separationists of Mirro fought for open trade and access to the Empire of Erume to the north. The end of the war lead to the subjugation of Mirro by the religious capital Haslat."
   },
   {
     id: "upper-halloe",
     name: "Upper Halloe",
     pos: [IMAGE_HEIGHT-3622, 912] as [number, number],
     img: "/images/landmarks/Upper Halloe.jpg",
-    text: "Island City near Umyss Keep where the ancient dragon, by the name of Umyss, according to tale resides"
+    text: "Upper Halloe is the jungle capital of the islands known as The Halloes. It is a difficult city to access due to its distance from the coast, but its proximity to the ancient magic dragon Umyss and his scaled and entrance-less keep is what initially caused the city to grow faster than any other in the islands. The stone buildings of the city blend with the overgrown jungle and contrast with the wooden structures build into the large trees that spiral around each other on the city's outskirts. The pyromancy college of Upper Halloe is known as a center for pestilence pyromancy research which allows its scholars and priests to commune and control the very aspects of nature."
   },
   {
     id: "nocstend",
     name: "Nocstend",
     pos: [IMAGE_HEIGHT-2977, 1868] as [number, number],
     img: "/images/landmarks/Nocstend.jpg",
-    text: "The major city of the Forest of Stars and home of the Noctpriest and their Orthodoxy"
+    text: "The ancient capital of the Forest of Stars. The city is built above and around vast gardens of glowing flora native to the forest. The upper city is built upon great stairs and walkways of marble and silver which punctuate the glowing seedlings which drift through the air. Tall gothic towers pierce the skyline and connect to Nocstend's Grand Cathedral which holds the massive purple crystal, radiating is magical resting protection. Underneath the crystal is the silver chalice which collects fallen adventurers as condensation that reforms into the amphitheater below."
   },
 ];
 
