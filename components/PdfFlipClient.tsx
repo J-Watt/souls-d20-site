@@ -134,9 +134,14 @@ export default function PdfFlipClient() {
             key={flipKey}
             size="fixed"
             autoSize={false}
-
             width={pageWidth}
             height={pageHeight}
+            minWidth={200}
+            maxWidth={1200}
+            minHeight={300}
+            maxHeight={1600}
+            flippingTime={600}
+            mobileScrollSupport={true}
             style={{
               width: `${bookWidth}px`,
               height: `${bookHeight}px`,
