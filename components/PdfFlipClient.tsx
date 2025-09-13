@@ -64,7 +64,8 @@ export default function PdfFlipClient() {
   }, []);
 
   const fileSpec = useMemo(() => (pdfData ? { data: pdfData } : null), [pdfData]);
-  const pages = useMemo(() => Array.from({ length: numPages || 2 }, (_, i) => i + 1), [numPages]);
+  // Skip first page (cover) - start from page 2
+  const pages = useMemo(() => Array.from({ length: Math.max(0, numPages - 1) || 1 }, (_, i) => i + 2), [numPages]);
 
   const isLandscape = containerW > containerH;
   const isSpread = isLandscape || containerW >= SPREAD_BREAKPOINT;
@@ -163,6 +164,25 @@ export default function PdfFlipClient() {
             startZIndex={0}
             className="html-flip-book rounded-xl overflow-hidden shadow-soft mx-auto"
           >
+            {/* JPG Cover Page */}
+            <div key="cover" className="page-content">
+              <img
+                src="/book/Souls_D20_Book_Cover.jpg"
+                alt="Souls D20 Book Cover"
+                style={{
+                  width: pageWidth,
+                  height: pageHeight,
+                  objectFit: 'cover',
+                  display: 'block'
+                }}
+                onLoad={() => {
+                  // Count cover as loaded
+                  setPagesLoaded((n) => Math.min(n + 1, numPages));
+                }}
+              />
+            </div>
+
+            {/* PDF Pages (starting from page 2) */}
             {pages.map((page) => (
               <div key={page} className="page-content">
                 <Page
@@ -171,7 +191,7 @@ export default function PdfFlipClient() {
                   renderTextLayer={false}
                   renderAnnotationLayer={false}
                   onLoadSuccess={(p: any) => {
-                    if (page === 1) handleFirstPageLoaded(p);
+                    if (page === 2) handleFirstPageLoaded(p); // Use page 2 for aspect ratio
                     setPagesLoaded((n) => (n < numPages ? n + 1 : n));
                   }}
                 />
