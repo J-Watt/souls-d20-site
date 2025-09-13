@@ -10,16 +10,16 @@ export default function BookPage() {
       <header className="space-y-1 text-center">
         <h1 className="text-2xl sm:text-3xl md:text-4xl font-semibold">Rulebook Preview</h1>
         <p className="opacity-80 text-sm sm:text-base">
-          Full PDF available if you prefer standard view.
+          Full PDF available{" "}
+          <a
+            className="underline"
+            href="/book/Souls_D20_Book.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            here
+          </a>.
         </p>
-        <a
-          className="underline"
-          href="/book/Souls_D20_Book.pdf"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Open PDF
-        </a>
       </header>
 
       <div
