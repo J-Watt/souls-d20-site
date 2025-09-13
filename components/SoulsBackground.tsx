@@ -28,7 +28,7 @@ interface SoulsBackgroundProps {
 
 export default function SoulsBackground({ enabled }: SoulsBackgroundProps) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
-  const animationIdRef = useRef<number>();
+  const animationIdRef = useRef<number | undefined>(undefined);
   const soulsRef = useRef<Soul[]>([]);
   const timeRef = useRef(0);
   const [dimensions, setDimensions] = useState({ width: 0, height: 0 });
