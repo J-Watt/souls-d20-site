@@ -57,7 +57,7 @@ export default function SupportPage() {
             className="panel flex flex-col items-center justify-center gap-3 py-6 px-4 hover:bg-white/5 transition-colors cursor-pointer"
             variants={fadeInUp}
           >
-            <span className="text-xl font-semibold text-gold">Become a</span>
+            <span className="text-xl font-semibold text-gold">Become a patron</span>
             <Image
               src="/images/support/patreon-logo.png"
               alt="Patreon"
