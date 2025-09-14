@@ -12,7 +12,7 @@ export default function HomePage() {
       <div className="flex items-center justify-center">
         <Image
           src="/images/logos/SoulsD20 Title Color.png"
-          alt="SoulsD20"
+          alt="Souls D20"
           width={1200}
           height={360}
           priority
