@@ -1,9 +1,7 @@
 import Image from "next/image";
 import HomeShowcaseTabs from "../components/HomeShowcaseTabs";
 
-export const metadata = {
-  title: "Home"
-};
+// No metadata export needed - will use default "Souls D20" from layout
 
 export default function HomePage() {
   return (

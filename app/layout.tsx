@@ -7,6 +7,7 @@ import { AnimationProvider } from "@/components/AnimationContext";
 import SoulsBackgroundWrapper from "@/components/SoulsBackgroundWrapper";
 
 export const metadata = {
+  metadataBase: new URL('https://soulsd20.com'),
   title: {
     template: "%s - Souls D20",
     default: "Souls D20"
@@ -17,7 +18,9 @@ export const metadata = {
   creator: "Souls D20 Team",
   publisher: "Souls D20",
   icons: {
-    icon: '/favicon-32x32.png'
+    icon: '/favicon-32x32.png',
+    apple: '/favicon-32x32.png',
+    shortcut: '/favicon-32x32.png'
   },
   openGraph: {
     type: 'website',
