@@ -1,9 +1,7 @@
 import Image from "next/image";
 import HomeShowcaseTabs from "../components/HomeShowcaseTabs";
 
-export const metadata = {
-  title: "Home"
-};
+// No metadata export needed - will use default "Souls D20" from layout
 
 export default function HomePage() {
   return (
@@ -12,7 +10,7 @@ export default function HomePage() {
       <div className="flex items-center justify-center">
         <Image
           src="/images/logos/SoulsD20 Title Color.png"
-          alt="SoulsD20"
+          alt="Souls D20"
           width={1200}
           height={360}
           priority

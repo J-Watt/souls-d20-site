@@ -83,19 +83,28 @@ export default function SupportPage() {
             </p>
           </motion.div>
           
-          <motion.button 
-            className="panel flex flex-col items-center justify-center gap-3 py-6 px-4 hover:bg-white/5 transition-colors cursor-pointer"
+          <motion.div
+            className="panel flex flex-col items-center justify-center gap-3 py-6 px-4 hover:bg-white/5 transition-colors"
             variants={fadeInUp}
           >
             <span className="text-xl font-semibold text-gold">Donate with</span>
-            <Image
-              src="/images/support/paypal-logo.png"
-              alt="PayPal"
-              width={250}
-              height={60}
-              className="h-15 w-auto object-contain"
-            />
-          </motion.button>
+            <form action="https://www.paypal.com/donate" method="post" target="_top">
+              <input type="hidden" name="business" value="5FGGMENPSR3LU" />
+              <input type="hidden" name="no_recurring" value="0" />
+              <input type="hidden" name="item_name"
+                  value="Donations and payments are put toward more content like book materials, a monster manual, character sheets, and more!" />
+              <input type="hidden" name="currency_code" value="USD" />
+              <button type="submit" className="cursor-pointer">
+                <Image
+                  src="/images/support/paypal-logo.png"
+                  alt="PayPal"
+                  width={250}
+                  height={60}
+                  className="h-15 w-auto object-contain hover:brightness-110 transition-all"
+                />
+              </button>
+            </form>
+          </motion.div>
         </motion.section>
 
         {/* Section 3 - Origins */}

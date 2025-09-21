@@ -78,10 +78,10 @@ export default function SiteHeader() {
 
             {/* Center logo - larger and sticking out */}
             <li className="mx-2 md:mx-4 relative">
-              <Link href="/" aria-label="SoulsD20 Home" className="inline-flex relative z-50">
+              <Link href="/" aria-label="Souls D20 Home" className="inline-flex relative z-50">
                 <Image
                   src="/images/logos/SoulsD20 LOGO Color.png"
-                  alt="SoulsD20"
+                  alt="Souls D20"
                   width={240}
                   height={60}
                   priority
@@ -99,10 +99,17 @@ export default function SiteHeader() {
             ))}
           </ul>
 
-          {/* Mobile layout - centered text */}
+          {/* Mobile layout - centered logo */}
           <div className="lg:hidden flex items-center flex-1 justify-center">
-            <Link href="/" aria-label="SoulsD20 Home" className="inline-flex">
-              <span className="text-2xl font-bold text-[color:var(--gold)] tracking-wider">SoulsD20</span>
+            <Link href="/" aria-label="Souls D20 Home" className="inline-flex">
+              <Image
+                src="/images/logos/SoulsD20 Title Color.png"
+                alt="Souls D20"
+                width={200}
+                height={60}
+                priority
+                className="h-12 w-auto"
+              />
             </Link>
           </div>
 
@@ -139,7 +146,14 @@ export default function SiteHeader() {
               <div className="flex flex-col h-full">
                 {/* Header */}
                 <div className="flex items-center justify-between p-6 border-b border-white/10">
-                  <h2 className="text-lg font-medium text-[color:var(--gold)]">SoulsD20</h2>
+                  <Image
+                    src="/images/logos/SoulsD20 Title Color.png"
+                    alt="Souls D20"
+                    width={160}
+                    height={48}
+                    priority
+                    className="h-12 w-auto"
+                  />
                   <button
                     onClick={() => setMobileMenuOpen(false)}
                     className="p-2 rounded-full hover:bg-white/10 transition-colors"

@@ -188,6 +188,9 @@ export default function PdfFlipClient() {
                 <Page
                   pageNumber={page}
                   width={pageWidth}
+                  devicePixelRatio={2}
+                  renderMode="canvas"
+                  canvasBackground="white"
                   renderTextLayer={false}
                   renderAnnotationLayer={false}
                   onLoadSuccess={(p: any) => {
