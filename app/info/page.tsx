@@ -84,7 +84,7 @@ export default function InfoPage() {
               and playtested. Get the latest full version through our Discord community.
             </p>
             <a
-              href="https://discord.gg/UnEKqTx"
+              href="https://discord.gg/eAMZmnTS4W"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center rounded-md px-6 py-3
@@ -275,7 +275,7 @@ export default function InfoPage() {
                 Play Now
               </a>
               <a
-                href="https://discord.gg/UnEKqTx"
+                href="https://discord.gg/eAMZmnTS4W"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center rounded-md px-8 py-4

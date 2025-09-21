@@ -222,4 +222,4 @@ All rights reserved. This project is proprietary.
 
 For questions or support:
 - **Email**: vgtimis133@gmail.com
-- **Discord**: [https://discord.gg/UnEKqTx](https://discord.gg/UnEKqTx)
+- **Discord**: [https://discord.gg/eAMZmnTS4W](https://discord.gg/eAMZmnTS4W)

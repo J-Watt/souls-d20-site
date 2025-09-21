@@ -81,7 +81,7 @@ export default function PlayPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center" role="group" aria-label="Contact actions">
             <a
-              href="https://discord.gg/UnEKqTx"
+              href="https://discord.gg/eAMZmnTS4W"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 rounded-md px-6 py-3

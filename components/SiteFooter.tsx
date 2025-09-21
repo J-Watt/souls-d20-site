@@ -52,7 +52,7 @@ export default function SiteFooter() {
 
               {/* Discord */}
               <a
-                href="https://discord.gg/UnEKqTx"
+                href="https://discord.gg/eAMZmnTS4W"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 transition-colors flex items-center justify-center"

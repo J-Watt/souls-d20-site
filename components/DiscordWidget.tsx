@@ -10,7 +10,7 @@ export default function DiscordWidget() {
         sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"
       />
       <div className="text-sm opacity-80 mt-2">
-        <a className="underline" href="https://discord.gg/UnEKqTx" target="_blank">Open in Discord</a>
+        <a className="underline" href="https://discord.gg/eAMZmnTS4W" target="_blank">Open in Discord</a>
       </div>
     </div>
   );
